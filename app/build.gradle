@@ -5,10 +5,10 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 def api_key = "56d16c2be3cb5775ff635984cb4e8138"
-def api_url = "https://way.jd.com/"
+def api_url = "https://way.jd.com/jisuapi/"
 
 def RELEASE_KEY_PASSWORD = "123456"
-def RELEASE_KEY_ALIAS = "agaghd"
+def RELEASE_KEY_ALIAS = "agaghd_news_key"
 def RELEASE_STORE_PASSWORD = "123456"
 
 android {
