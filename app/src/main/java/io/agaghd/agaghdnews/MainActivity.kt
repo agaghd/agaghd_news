@@ -1,20 +1,18 @@
 package io.agaghd.agaghdnews
 
-import android.content.Context
-import android.content.Intent
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import io.agaghd.agaghdnews.network.NewsApi
+import io.agaghd.agaghdnews.utils.BaseActivity
+import io.agaghd.agaghdnews.utils.ToastUtil
 import kotlinx.android.synthetic.main.activity_main.*
 import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
-import java.io.IOException
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,12 +21,12 @@ class MainActivity : AppCompatActivity() {
         var newsApi = retrofit.create(NewsApi::class.java)
         newsApi.getChannel().enqueue(object : Callback<ResponseBody> {
             override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
-                if(response.body()!=null){
+                if (response.body() != null) {
                     try {
                         var result = response.body()!!.string()
                         Log.i("wtf", response.body()!!.string())
-                        hello_world_tv.text= result
-                    } catch (e: IOException) {
+                        hello_world_tv.text = result
+                    } catch (e: Throwable) {
                         e.printStackTrace()
                     }
 
@@ -36,8 +34,9 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
-
+                ToastUtil.showToast(mContext, "abc")
             }
         })
     }
+
 }
