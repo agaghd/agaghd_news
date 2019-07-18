@@ -1,6 +1,7 @@
-package io.agaghd.agaghdnews;
+package io.agaghd.agaghdnews.others;
 
 import android.util.Log;
+import io.agaghd.agaghdnews.BuildConfig;
 import io.agaghd.agaghdnews.network.NewsApi;
 import okhttp3.ResponseBody;
 import retrofit2.Call;

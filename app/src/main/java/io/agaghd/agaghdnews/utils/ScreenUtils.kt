@@ -39,20 +39,17 @@ object ScreenUtils {
         if (context is Activity) {
             val activity = context
             val contentView = activity.findViewById<ViewGroup>(android.R.id.content)
-            contentView.post(object : Runnable {
-                override fun run() {
-                    val screeLogger = getScreenLogger(contentView)
-                    if (clearMsg) {
-                        screeLogger.text = msg
-                    } else {
-                        screeLogger.append(msg)
-                        if (lineFeed) {
-                            screeLogger.append("\n")
-                        }
+            contentView.post {
+                val screeLogger = getScreenLogger(contentView)
+                if (clearMsg) {
+                    screeLogger.text = msg
+                } else {
+                    screeLogger.append(msg)
+                    if (lineFeed) {
+                        screeLogger.append("\n")
                     }
                 }
-
-            })
+            }
         } else {
             ToastUtil.showToast(context, msg)
         }
