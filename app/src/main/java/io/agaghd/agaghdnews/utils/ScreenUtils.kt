@@ -16,6 +16,14 @@ object ScreenUtils {
 
     private val SCREEN_LOGGER_TAG = "ScreenLoggerTag"
 
+    public fun getScreenWidth(context: Context): Int {
+        return context.resources.displayMetrics.widthPixels;
+    }
+
+    public fun getScreenHeight(context: Context): Int {
+        return context.resources.displayMetrics.heightPixels;
+    }
+
     public fun print(context: Context, msg: CharSequence) {
         print(context, msg, false, false)
     }
