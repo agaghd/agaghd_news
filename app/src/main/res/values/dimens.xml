@@ -2,4 +2,7 @@
 <resources>
     <dimen name="screen_padding">16dp</dimen>
     <dimen name="screen_padding_half">16dp</dimen>
+    <dimen name="space_height">8dp</dimen>
+    <dimen name="action_bar_height">48dp</dimen>
+    <dimen name="button_height">44dp</dimen>
 </resources>
