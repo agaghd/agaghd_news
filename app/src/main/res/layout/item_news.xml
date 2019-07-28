@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:background="@android:color/white"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/screen_padding"
+        android:paddingEnd="@dimen/screen_padding"
+        android:paddingTop="@dimen/space_height"
+        android:paddingBottom="@dimen/space_height">
+
+    <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:height="90dp"
+            android:textColor="@color/text_color_black"
+            android:textSize="@dimen/content_textsize_l"
+            tools:text="震惊：华农兄弟烹杀竹鼠，理由竟是中暑？"
+            android:ellipsize="end"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/pic_iv"
+            app:layout_constraintBottom_toTopOf="@+id/time_src_tv"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+            android:id="@+id/pic_iv"
+            android:layout_width="120dp"
+            android:layout_height="90dp"
+            android:visibility="gone"
+            android:layout_marginStart="@dimen/screen_padding"
+            tools:visibility="visible"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/title_tv"
+            tools:src="@color/bg"
+            tools:ignore="ContentDescription"/>
+
+
+    <TextView
+            android:id="@+id/time_src_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/content_textsize_s"
+            android:textColor="@color/text_color_gray"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_tv"
+            app:layout_constraintRight_toLeftOf="@id/pic_iv"
+            tools:text="新浪新闻 2019-6-4 15：06"/>
+
+
+    <TextView
+            android:id="@+id/content_tv"
+            android:layout_width="0dp" android:layout_height="wrap_content"
+            android:textSize="@dimen/content_textsize_l"
+            android:textColor="@color/text_color_black"
+            android:layout_marginTop="@dimen/space_height"
+            android:visibility="gone"
+            android:maxLines="5"
+            android:ellipsize="end"
+            app:layout_constraintTop_toBottomOf="@id/pic_iv"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:text="夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦夭寿啦"/>
+
+
+</android.support.constraint.ConstraintLayout>

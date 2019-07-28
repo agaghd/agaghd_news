@@ -9,12 +9,12 @@
             android:roundIcon="@mipmap/kimumaru"
             android:supportsRtl="true"
             android:theme="@style/AppTheme" tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name=".MainActivity"
+        <activity android:name=".activity.MainActivity"
                   android:launchMode="singleTask"
                   android:screenOrientation="portrait">
 
         </activity>
-        <activity android:name=".SplashActivity"
+        <activity android:name=".activity.SplashActivity"
                   android:screenOrientation="portrait"
                   android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
                   android:launchMode="singleTask">

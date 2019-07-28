@@ -1,8 +1,9 @@
-package io.agaghd.agaghdnews
+package io.agaghd.agaghdnews.adapter
 
 import android.graphics.Color
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.BaseViewHolder
+import io.agaghd.agaghdnews.R
 
 public class ChannelAdapter(layoutResId: Int, data: MutableList<String>?) :
     BaseQuickAdapter<String, BaseViewHolder>(layoutResId, data) {
@@ -22,7 +23,7 @@ public class ChannelAdapter(layoutResId: Int, data: MutableList<String>?) :
             textColor = Color.WHITE
         } else {
             bgColor = Color.WHITE
-            textColor = helper?.itemView?.context?.resources?.getColor(R.color.text_color)!!
+            textColor = helper?.itemView?.context?.resources?.getColor(R.color.text_color_black)!!
         }
         helper.setBackgroundColor(R.id.item_root, bgColor)
         helper.setTextColor(R.id.item_tv, textColor)

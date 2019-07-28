@@ -6,6 +6,6 @@ package io.agaghd.agaghdnews.network
  * desc :   网络请求的封装回调
  */
 interface RequestListener {
-    fun onSuccess(reponse: String)
+    fun onSuccess(response: String)
     fun onError(msg: String)
 }
