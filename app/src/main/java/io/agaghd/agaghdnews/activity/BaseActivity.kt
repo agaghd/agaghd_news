@@ -1,4 +1,4 @@
-package io.agaghd.agaghdnews.utils
+package io.agaghd.agaghdnews.activity
 
 import android.content.Context
 import android.os.Bundle
