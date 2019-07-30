@@ -12,6 +12,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.chad.library.adapter.base.BaseQuickAdapter
 import io.agaghd.agaghdnews.R
+import io.agaghd.agaghdnews.activity.BaseActivity
 import io.agaghd.agaghdnews.activity.WebActivity
 import io.agaghd.agaghdnews.adapter.NewsAdapter
 import io.agaghd.agaghdnews.network.RequestListener
@@ -76,10 +77,16 @@ class NewsFragment : Fragment() {
     }
 
     fun loadNews(channel: String, pageSize: Int, start: Int) {
+        if(mContext is BaseActivity && !refresh_layout.isRefreshing){
+            (mContext as BaseActivity).showProgressDialog()
+        }
         RequestUtil.getNewsByChannel(
             channel, pageSize, start,
             object : RequestListener {
                 override fun onSuccess(response: String) {
+                    if(mContext is BaseActivity){
+                        (mContext as BaseActivity).closeProgressDialog()
+                    }
                     if (!isVisible) {
                         return
                     }
@@ -105,6 +112,9 @@ class NewsFragment : Fragment() {
                 }
 
                 override fun onError(msg: String) {
+                    if(mContext is BaseActivity){
+                        (mContext as BaseActivity).closeProgressDialog()
+                    }
                     refresh_layout.isRefreshing = false
                     ToastUtil.showToast(mContext, msg)
                     newsAdapter.loadMoreFail()

@@ -58,6 +58,7 @@ class MainActivity : BaseActivity() {
     }
 
     fun loadChannel() {
+        showProgressDialog()
         RequestUtil.getChannel(object : RequestListener {
             override fun onSuccess(response: String) {
                 try {
@@ -85,6 +86,7 @@ class MainActivity : BaseActivity() {
             }
 
             override fun onError(msg: String) {
+                closeProgressDialog()
                 ToastUtil.showToast(mContext, msg)
             }
 
