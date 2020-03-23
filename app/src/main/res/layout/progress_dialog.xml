@@ -22,7 +22,6 @@
             android:layout_height="wrap_content"
             android:textSize="@dimen/content_textsize_l"
             android:textColor="@color/text_color_black"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toLeftOf="@id/gif_iv"
             app:layout_constraintBottom_toTopOf="@id/gif_iv"
             android:text="年轻人"/>

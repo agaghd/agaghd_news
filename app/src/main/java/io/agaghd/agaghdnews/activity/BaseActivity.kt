@@ -3,6 +3,7 @@ package io.agaghd.agaghdnews.activity
 import android.content.Context
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
 import io.agaghd.agaghdnews.CustomProgressDialog
 import io.agaghd.agaghdnews.R
 
@@ -15,7 +16,37 @@ abstract class BaseActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mContext = this
+        Log.i("wtf", this.javaClass.name +" onCreate")
         mProgressDialog = CustomProgressDialog(mContext, R.style.CustomProgressDialogStyle)
+    }
+
+    override fun onStart() {
+        Log.i("wtf", this.javaClass.name +" onStart")
+        super.onStart()
+    }
+
+    override fun onPause() {
+        Log.i("wtf", this.javaClass.name +" onPause")
+
+        super.onPause()
+    }
+
+    override fun onStop() {
+        Log.i("wtf", this.javaClass.name +" onStop")
+
+        super.onStop()
+    }
+
+    override fun onDestroy() {
+        Log.i("wtf", this.javaClass.name +" onDestroy")
+
+        super.onDestroy()
+    }
+
+    override fun onRestart() {
+        Log.i("wtf", this.javaClass.name +" onRestart")
+
+        super.onRestart()
     }
 
     fun showProgressDialog() {
