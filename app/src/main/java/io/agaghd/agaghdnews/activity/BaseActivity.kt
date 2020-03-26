@@ -16,35 +16,41 @@ abstract class BaseActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mContext = this
-        Log.i("wtf", this.javaClass.name +" onCreate")
+        Log.i("wtf", this.javaClass.name + " onCreate")
+        Log.i("wtf", this.javaClass.name + " taskId: " + taskId)
         mProgressDialog = CustomProgressDialog(mContext, R.style.CustomProgressDialogStyle)
     }
 
     override fun onStart() {
-        Log.i("wtf", this.javaClass.name +" onStart")
+        Log.i("wtf", this.javaClass.name + " onStart")
         super.onStart()
     }
 
+    override fun onResume() {
+        Log.i("wtf", this.javaClass.name + " onResume")
+        super.onResume()
+    }
+
     override fun onPause() {
-        Log.i("wtf", this.javaClass.name +" onPause")
+        Log.i("wtf", this.javaClass.name + " onPause")
 
         super.onPause()
     }
 
     override fun onStop() {
-        Log.i("wtf", this.javaClass.name +" onStop")
+        Log.i("wtf", this.javaClass.name + " onStop")
 
         super.onStop()
     }
 
     override fun onDestroy() {
-        Log.i("wtf", this.javaClass.name +" onDestroy")
+        Log.i("wtf", this.javaClass.name + " onDestroy")
 
         super.onDestroy()
     }
 
     override fun onRestart() {
-        Log.i("wtf", this.javaClass.name +" onRestart")
+        Log.i("wtf", this.javaClass.name + " onRestart")
 
         super.onRestart()
     }
